@@ -1,0 +1,586 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --blue: #3e60d0;
+  --border-ash: #ffffff33;
+  --input-text: #8d8d8e;
+  --border-gray: #7d7878;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  background-color: black;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 66px 24px 80px;
+  border-bottom: 1px solid var(--border-ash);
+}
+
+.app-name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-name-container .app-acronym {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 42.23px;
+  color: var(--white);
+}
+
+.app-name-container .app-name {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11.73px;
+  color: var(--white);
+}
+
+.nav-bar .open-map {
+  display: flex;
+  align-items: center;
+  padding: 19px 44px 19px 44px;
+  gap: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  cursor: pointer;
+}
+
+.main-landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 82px 210px 64px;
+}
+
+.main-landing-page .page-intro {
+  display: flex;
+  flex-direction: column;
+  max-width: 1308px;
+  gap: 24px;
+  margin-bottom: 61px;
+}
+
+.page-intro .page-intro-header {
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 85px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-intro .page-intro-sub-header {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: var(--white);
+}
+
+.search-form {
+  display: flex;
+  width: 543px;
+}
+
+.search-form .search-input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 16.5px;
+  background-color: var(--white);
+}
+
+.search-input-container .search-input {
+  border: none;
+  outline: none;
+  color: var(--input-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  width: 100%;
+}
+
+.search-form .search-button {
+  padding: 21.5px 31px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  cursor: pointer;
+}
+
+.weather-info-landing-page {
+  margin-top: 140px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 37px 64px;
+  border: 1px solid var(--border-gray);
+  box-shadow: 0px 0px 20px 0px var(--border-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-info-landing-page .location-container {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.location-container .location {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 41.06px;
+  color: var(--white);
+}
+
+.location-container .temperature {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.temperature .temperature-value-container {
+  display: flex;
+}
+
+.temperature-value-container .temperature-value {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 93.84px;
+  color: var(--white);
+}
+
+.temperature-value-container .degree {
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--white);
+  border-radius: 100%;
+}
+
+.temperature .temperature-overview {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.33px;
+  color: var(--white);
+}
+
+.weather-info-landing-page .temperature-metadata {
+  max-width: 272px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.temperature-metadata .temperature-condition {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.33px;
+  color: var(--white);
+  display: block;
+}
+
+.temperature-metadata .temperature-forecast {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.33px;
+  color: var(--white);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer .credit {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  color: var(--white);
+}
+
+/* main search page */
+.main-search-page {
+  padding: 65px 90px 64px;
+}
+
+.search-result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-data-container .location-data {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.location-data-container .location-data .location {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 85px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.location-data-container .location-data .date {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32.84px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.location-data-container .location-weather-condition {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 46.92px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.current-temperature-container .current-temperature-value-container {
+  display: flex;
+}
+
+.current-temperature-value-container .current-temperature-value {
+  font-size: 190px;
+  font-weight: 500;
+  line-height: 222.87px;
+  color: var(--white);
+}
+
+.current-temperature-value-container .current-temperature-degree {
+  width: 20px;
+  height: 20px;
+  border: 5px solid var(--white);
+  border-radius: 100%;
+}
+
+.current-temperature-container .current-temperature-range {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 49.27px;
+  color: var(--white);
+}
+
+.weather-info-search-page {
+  margin-top: 124px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 45px 68px;
+  border: 1px solid var(--border-gray);
+  box-shadow: 0px 0px 20px 0px var(--border-gray);
+  display: flex;
+  gap: 84px;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.weather-info-search-page .weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.weather-info .time {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 44.57px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.weather-info .time-current-temperature {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 44.57px;
+  color: var(--white);
+}
+
+/* media query */
+
+@media screen and (max-width: 1130px) {
+  .main-landing-page {
+    padding: 82px 110px 64px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .nav-bar {
+    padding: 25px 23.5px;
+  }
+
+  .app-name-container {
+    gap: 6px;
+  }
+
+  .app-name-container .app-acronym {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.15px;
+  }
+
+  .app-name-container .app-name {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 9.38px;
+  }
+
+  .nav-bar .open-map {
+    display: none;
+  }
+
+  .main-landing-page {
+    padding: 48px 25px 64px;
+  }
+
+  .main-landing-page .page-intro {
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .page-intro .page-intro-header {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .page-intro-header .thunder {
+    width: 20px;
+    height: 20px;
+  }
+
+  .page-intro .page-intro-sub-header {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .search-form {
+    width: 298.45px;
+  }
+
+  .search-form .search-input-container {
+    gap: 5.5px;
+    padding: 8.24px 7.83px 9.07px;
+  }
+
+  .search-input-container .search-icon {
+    width: 9.89px;
+    height: 9.89px;
+  }
+
+  .search-input-container .search-input {
+    font-size: 7.69px;
+    line-height: 17.59px;
+  }
+
+  .search-form .search-button {
+    padding: 12.04px 16.97px;
+    font-size: 8.79px;
+    line-height: 10.32px;
+  }
+
+  .weather-info-landing-page {
+    align-items: flex-end;
+    width: 380px;
+    padding: 15.71px 19.14px 25.34px 23.71px;
+  }
+
+  .weather-info-landing-page .location-container {
+    gap: 7.41px;
+  }
+
+  .location-container .location {
+    gap: 5.58px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.77px;
+  }
+
+  .location-container .temperature {
+    gap: 7.41px;
+  }
+
+  .temperature .temperature-value-container {
+    display: flex;
+  }
+
+  .temperature-value-container .temperature-value {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 37.54px;
+  }
+
+  .temperature-value-container .degree {
+    width: 6.97px;
+    height: 6.97px;
+    border: 1.5px solid var(--white);
+    border-radius: 100%;
+  }
+
+  .temperature .temperature-overview {
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 9.38px;
+  }
+
+  .weather-info-landing-page .temperature-metadata {
+    gap: 8.02px;
+  }
+
+  .temperature-metadata .temperature-condition {
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 9.38px;
+  }
+
+  .temperature-metadata .temperature-forecast {
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 10.56px;
+  }
+
+  .footer .credit {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  /* main search page media query */
+  .main-search-page {
+    padding: 36px 24px 241.15px;
+  }
+
+  .search-result-container {
+    display: grid;
+    grid-template-areas:
+      "location temperature"
+      "form form";
+    gap: 54px 76px;
+  }
+
+  .location-data-container {
+    grid-area: location;
+  }
+
+  .search-form-container {
+    grid-area: form;
+  }
+
+  .search-form-container .search-form {
+    width: 100%;
+  }
+
+  .location-data-container .location-data {
+    gap: 5.68px;
+    margin-bottom: 18.95px;
+  }
+
+  .location-data-container .location-data .location {
+    font-size: 26.53px;
+    font-weight: 500;
+    line-height: 40.26px;
+    letter-spacing: -0.02em;
+  }
+
+  .location-data-container .location-data .date {
+    font-size: 13.26px;
+    font-weight: 400;
+    line-height: 15.56px;
+    letter-spacing: -0.02em;
+  }
+
+  .location-data-container .location-weather-condition {
+    font-size: 18.95px;
+    font-weight: 500;
+    line-height: 22.23px;
+    letter-spacing: -0.02em;
+  }
+
+  .current-temperature-container {
+    grid-area: temperature;
+  }
+
+  .current-temperature-container .current-temperature-value-container {
+    display: flex;
+  }
+
+  .current-temperature-value-container .current-temperature-value {
+    font-size: 94.9px;
+    font-weight: 500;
+    line-height: 111.32px;
+  }
+
+  .current-temperature-value-container .current-temperature-degree {
+    width: 9.99px;
+    height: 9.99px;
+    border: 2.5px solid var(--white);
+  }
+
+  .current-temperature-container .current-temperature-range {
+    font-size: 20.98px;
+    font-weight: 400;
+    line-height: 24.61px;
+  }
+
+  .weather-info-search-page {
+    margin-top: 64px;
+    gap: 12px;
+    border-radius: 3.49px;
+    padding: 27px 18px;
+  }
+
+  .weather-info-search-page .weather-info {
+    gap: 12px;
+  }
+
+  .weather-info .time {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.42px;
+    letter-spacing: -0.02em;
+  }
+
+  .weather-info .time-current-temperature {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.42px;
+  }
+}
