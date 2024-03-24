@@ -10,6 +10,7 @@
   --border-ash: #ffffff33;
   --input-text: #8d8d8e;
   --border-gray: #7d7878;
+  --red: red;
 }
 
 body {
@@ -17,6 +18,21 @@ body {
   font-family: "Work Sans", sans-serif;
   height: 100vh;
   background-color: black;
+}
+
+.scroll-bar::-webkit-scrollbar {
+  display: inline;
+  width: 3px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: var(--white);
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: var(--border-gray);
+  border-radius: 3px;
 }
 
 .nav-bar {
@@ -120,6 +136,10 @@ body {
   width: 100%;
 }
 
+.search-input-container .search-input:-webkit-autofill:-webkit-autofill:focus {
+  transition: background-color 600000s 0s;
+}
+
 .search-form .search-button {
   padding: 21.5px 31px;
   font-size: 16px;
@@ -150,7 +170,7 @@ body {
   gap: 26px;
 }
 
-.location-container .location {
+.location-container .location-wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -218,6 +238,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-bottom: 49px;
 }
 
 .footer .credit {
@@ -236,6 +257,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.location-data-container {
+  display: none;
 }
 
 .location-data-container .location-data {
@@ -269,6 +294,10 @@ body {
   color: var(--white);
 }
 
+.current-temperature-container {
+  display: none;
+}
+
 .current-temperature-container .current-temperature-value-container {
   display: flex;
 }
@@ -287,13 +316,6 @@ body {
   border-radius: 100%;
 }
 
-.current-temperature-container .current-temperature-range {
-  font-size: 42px;
-  font-weight: 400;
-  line-height: 49.27px;
-  color: var(--white);
-}
-
 .weather-info-search-page {
   margin-top: 124px;
   width: 100%;
@@ -306,6 +328,7 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow-x: scroll;
+  display: none;
 }
 
 .weather-info-search-page .weather-info {
@@ -428,7 +451,7 @@ body {
     gap: 7.41px;
   }
 
-  .location-container .location {
+  .location-container .location-wrapper {
     gap: 5.58px;
     font-size: 16px;
     font-weight: 600;
@@ -478,6 +501,10 @@ body {
     line-height: 10.56px;
   }
 
+  .footer {
+    padding-bottom: 24px;
+  }
+
   .footer .credit {
     font-size: 18px;
     font-weight: 500;
@@ -486,7 +513,7 @@ body {
 
   /* main search page media query */
   .main-search-page {
-    padding: 36px 24px 241.15px;
+    padding: 36px 24px 141.15px;
   }
 
   .search-result-container {
@@ -495,6 +522,7 @@ body {
       "location temperature"
       "form form";
     gap: 54px 76px;
+    width: 100%;
   }
 
   .location-data-container {
@@ -553,12 +581,6 @@ body {
     width: 9.99px;
     height: 9.99px;
     border: 2.5px solid var(--white);
-  }
-
-  .current-temperature-container .current-temperature-range {
-    font-size: 20.98px;
-    font-weight: 400;
-    line-height: 24.61px;
   }
 
   .weather-info-search-page {

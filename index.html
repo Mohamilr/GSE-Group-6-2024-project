@@ -18,7 +18,7 @@
     />
     <title>Global Weather Forecast</title>
   </head>
-  <body>
+  <body class="scroll-bar">
     <!-- nav -->
     <nav class="nav-bar">
       <div class="app-name-container">
@@ -29,9 +29,9 @@
           Weather Forecast
         </span>
       </div>
-      <button class="open-map">
+      <!-- <button class="open-map">
         <img src="./assets/svg/map.svg" alt="map" /> Open Maps
-      </button>
+      </button> -->
     </nav>
 
     <!-- main  landing page -->
@@ -50,7 +50,7 @@
         </p>
       </section>
 
-      <section>
+      <!-- <section class="landing-page-search-form-container">
         <form class="search-form">
           <div class="search-input-container">
             <img
@@ -60,19 +60,61 @@
             />
             <input
               type="search"
-              id="search-location"
+              id="search-input"
               name="location"
               placeholder="Enter location"
               class="search-input"
             />
           </div>
-          <button type="submit" class="search-button">Get Updates</button>
+          <button type="button" class="search-button">Get Updates</button>
         </form>
+      </section> -->
+
+      <section class="search-result-container">
+        <div class="location-data-container">
+          <div class="location-data">
+            <h1 class="location">-</h1>
+            <p class="date">-</p>
+          </div>
+          <img
+            src="./assets/svg/logo.svg"
+            alt="weather-condition"
+            class="weather-condition"
+          />
+          <p class="location-weather-condition">-</p>
+        </div>
+
+        <div class="search-form-container">
+          <form class="search-form">
+            <div class="search-input-container">
+              <img
+                src="./assets/svg/search.svg"
+                alt="search"
+                class="search-icon"
+              />
+              <input
+                type="search"
+                id="search-input"
+                name="location"
+                placeholder="Enter location"
+                class="search-input"
+              />
+            </div>
+            <button type="submit" class="search-button">Get Updates</button>
+          </form>
+        </div>
+
+        <div class="current-temperature-container">
+          <div class="current-temperature-value-container">
+            <h2 class="current-temperature-value">-</h2>
+            <sup class="current-temperature-degree"></sup>
+          </div>
+        </div>
       </section>
 
       <section class="weather-info-landing-page">
         <div class="location-container">
-          <div class="location">
+          <div class="location-wrapper">
             <span id="location">Unilorin</span>
             <img src="./assets/svg/logo.svg" alt="logo" />
           </div>
@@ -86,101 +128,14 @@
         </div>
         <div class="temperature-metadata">
           <span class="time">-</span>
-          <span class="forecast-wind-speed"> Wind speed : </span>
+          <span class="forecast-wind-speed"> -</span>
         </div>
       </section>
+
+      <section class="weather-info-search-page scroll-bar"></section>
     </main>
 
     <!-- end of main landing page -->
-
-    <!-- main search page -->
-    <!-- <main class="main-search-page">
-      <section class="search-result-container">
-        <div class="location-data-container">
-          <div class="location-data">
-            <h1 class="location">San Francisco</h1>
-            <p class="date">August 14, 2024</p>
-          </div>
-          <img
-            src="./assets/svg/logo.svg"
-            alt="weather-condition"
-            class="weather-condition"
-          />
-          <p class="location-weather-condition">Heavy Rain</p>
-        </div>
-
-        <div class="search-form-container">
-          <form class="search-form">
-            <div class="search-input-container">
-              <img
-                src="./assets/svg/search.svg"
-                alt="search"
-                class="search-icon"
-              />
-              <input
-                type="search"
-                id="location"
-                name="location"
-                placeholder="Enter location"
-                class="search-input"
-              />
-            </div>
-            <button type="submit" class="search-button">Get Updates</button>
-          </form>
-        </div>
-
-        <div class="current-temperature-container">
-          <div class="current-temperature-value-container">
-            <h2 class="current-temperature-value">84</h2>
-            <sup class="current-temperature-degree"></sup>
-          </div>
-          <p class="current-temperature-range">90 / 71</p>
-        </div>
-      </section>
-
-      <section class="weather-info-search-page">
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-        <div class="weather-info">
-          <span class="time">Now</span>
-          <img src="./assets/svg/logo.svg" alt="temperature" />
-          <span class="time-current-temperature">90<sup>o</sup></span>
-        </div>
-      </section>
-    </main> -->
 
     <!-- footer -->
     <footer class="footer">
