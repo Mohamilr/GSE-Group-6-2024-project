@@ -1,6 +1,7 @@
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
 const searchForm = document.querySelector(".search-form");
+
 // landing page
 const searchFormContainer = document.querySelector(
   ".landing-page-search-form-container"
@@ -30,8 +31,6 @@ const locationDataContainer = document.querySelector(
 const currentTemperatureContainer = document.querySelector(
   ".current-temperature-container"
 );
-//
-let searchValue = "";
 
 const weatherOverview = {
   0: "Clear sky",
@@ -79,7 +78,7 @@ const getLatitudeAndLongitude = async (location) => {
     );
 
     const data = await response.json();
-    console.log({ data });
+
     if (data.results?.length < 1) {
       errorMessage = "Kindly enter a more precise location.";
       return "Kindly enter a more precise location.";
@@ -104,12 +103,8 @@ searchButton.addEventListener("click", async (e) => {
 
       if (returnValue?.length > 0) {
         alert(returnValue);
-        //   return (searchFormContainer.innerHTML += `<p class="location-search-error">${returnValue}</p>`);
       } else {
-        // searchValue = searchInput?.value;
-        // mainLandingPage.style.padding = "65px 90px 64px";
         mainLandingPage.classList.add("main-search-page");
-
         pageIntro.style.display = "none";
         LandingPageWeatherInfo.style.display = "none";
 
@@ -118,6 +113,8 @@ searchButton.addEventListener("click", async (e) => {
         locationDataContainer.style.display = "block";
         currentTemperatureContainer.style.display = "block";
       }
+    } else {
+      alert("Kindly enter a location.");
     }
   } else {
     alert("Kindly connect to the internet.");
@@ -153,7 +150,6 @@ const combineWeatherData = (data) => {
 const renderSearchPageResult = (data) => {
   const combinedData = combineWeatherData(data);
 
-  console.log({ combinedData });
   locationName.innerHTML = searchInput?.value;
   date.innerHTML = formatDate(new Date());
   locationWeatherCondition.innerHTML =
@@ -163,9 +159,11 @@ const renderSearchPageResult = (data) => {
   weatherResultInfo.innerHTML = "";
 
   combinedData?.forEach((data) => {
+    const time = formatTime(data?.time);
+
     weatherResultInfo.innerHTML += `
     <div class="weather-info">
-    <span class="time">${formatTime(data?.time)}</span>
+    <span class="time">${time === new Date().getHours() ? "Now" : time}</span>
     <img src="./assets/svg/logo.svg" alt="temperature" />
     <span class="time-current-temperature">${
       data?.temperature_2m
@@ -199,8 +197,6 @@ const getWeather = async (latitude, longitude) => {
 
 // Get weather data on page load
 getWeather();
-
-// getLatitudeAndLongitude();
 
 // format time to show am or pm
 function formatTime(dateIsoString) {
