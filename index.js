@@ -164,7 +164,7 @@ const renderSearchPageResult = (data) => {
     weatherResultInfo.innerHTML += `
     <div class="weather-info">
     <span class="time">${time === new Date().getHours() ? "Now" : time}</span>
-    <img src="./assets/svg/logo.svg" alt="temperature" />
+    <p class="weather-overview">${weatherOverview[data?.weather_code]}</p>
     <span class="time-current-temperature">${
       data?.temperature_2m
     }<sup>o</sup></span>

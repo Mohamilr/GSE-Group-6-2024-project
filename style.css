@@ -345,6 +345,13 @@ body {
   color: var(--white);
 }
 
+.weather-info .weather-overview {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.33px;
+  color: white;
+}
+
 .weather-info .time-current-temperature {
   font-size: 38px;
   font-weight: 400;
@@ -599,6 +606,12 @@ body {
     font-weight: 500;
     line-height: 16.42px;
     letter-spacing: -0.02em;
+  }
+
+  .weather-info .weather-overview {
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 9.38px;
   }
 
   .weather-info .time-current-temperature {
